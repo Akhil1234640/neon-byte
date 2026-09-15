@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeonBite | Food Delivery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">🍜 <span>Neon<span class="accent">Bite</span></span></div>
+  <nav>
+    <a href="#home">Home</a><a href="#places">Food Places</a><a href="#menu">Food Menu</a>
+    <button id="cartBtn">🛒 Cart <b id="cartCount">0</b></button>
+  </nav>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div>
+    <div class="pill">⚡ Fast delivery • Fresh food • Great offers</div>
+    <h1>Hungry?<br><span>We've got you.</span></h1>
+    <p>Discover delicious food from restaurants around you and explore a huge NeonBite menu.</p>
+    <div class="searchbox"><input id="search" placeholder="Search restaurant, food, city, area or cuisine..."><button onclick="doSearch()">Search</button></div>
+  </div>
+  <div class="hero-card"><div class="hero-food">🍔 🍕 🍗</div><strong>60+ dishes</strong><small>and 20 food places</small></div>
+</section>
+
+<section>
+<h2>What's on your mind?</h2>
+<div class="categories" id="categories"></div>
+</section>
+
+<section id="places">
+<div class="section-head"><h2>Search results</h2><span id="restaurantResultCount">20 restaurants</span></div>
+<div class="restaurants" id="restaurants"></div>
+</section>
+
+<section id="menu">
+<div class="section-head"><h2>🍽️ NeonBite Food Menu</h2><span id="resultCount"></span></div>
+<div class="filters" id="filters"></div>
+<div class="menu-grid" id="menuGrid"></div>
+</section>
+</main>
+
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-head"><h2>🛒 Your Cart</h2><button onclick="toggleCart()">✕</button></div>
+  <div id="cartItems"></div>
+  <div class="bill"><div>Subtotal <b id="subtotal">₹0</b></div><div>Delivery Fee <b>₹40</b></div><div>Taxes <b id="taxes">₹0</b></div><hr><div class="total">Total <b id="total">₹40</b></div><button class="checkout" onclick="alert('Demo checkout — your order has been prepared!')">Proceed to Checkout</button></div>
+</div>
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+<footer>
+  <div class="brand">🍜 Neon<span class="accent">Bite</span></div>
+  <p>Your food. Your way. A demo food-discovery and delivery website.</p>
+  <p>© 2026 NeonBite</p>
+</footer>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
